@@ -96,3 +96,6 @@ RUN cd /opt/extras && \
     conda env update -n base --file environment.yml && \
     cd /opt && rm -rf /opt/extras/* && \
     conda clean --all -f -y && rm -rf /tmp/*
+
+RUN mamba install --yes -c rapidsai-nightly jupyterlab-nvdashboard && \
+    conda clean --all -f -y && rm -rf /tmp/*
