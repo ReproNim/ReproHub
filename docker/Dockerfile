@@ -44,8 +44,7 @@ RUN conda install --yes datalad rclone 'h5py>3.3=mpi*' ipykernel zarr blosc \
   && pip install --no-cache-dir jupytext nbgitpuller datalad-container \
      datalad-osf nibabel nilearn dipy pybids pynidm pydra-ml reproschema reproman nda-tools \
      'pydra>=0.17' plotly itkwidgets==0.32.0 hdf5plugin s3fs datalad-neuroimaging pyontutils \
-     PyMARE  gower \
-     git+https://github.com/ReproNim/neurodocker.git@60e41158 \
+     PyMARE  gower neurodocker \
   && conda clean --all -f -y && rm -rf /tmp/*
 
 # git+https://github.com/ReproNim/reproman.git@0ff92665
