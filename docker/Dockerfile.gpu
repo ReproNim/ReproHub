@@ -97,3 +97,5 @@ RUN cd /opt/extras && \
 
 RUN mamba install --yes -c rapidsai-nightly jupyterlab-nvdashboard && \
     conda clean --all -f -y && rm -rf /tmp/*
+    
+ENV LD_LIBRARY_PATH /opt/conda/lib/
