@@ -1,4 +1,4 @@
-# ABCD-ReproNim Jupyter Hub
+# ReproNim Jupyter Hub (aka ReproHub)
 
 https://abcd.repronim.org
 
