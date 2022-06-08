@@ -69,7 +69,7 @@ Please note that the original MAST setup is now significantly outdated.
    Also note that the namespace has to be unique across any JH
    instances created with this setup. 
    
-6. create policy (`ig-policy` and copy the ARN from 
+6. create policy `ig-policy` and copy the ARN from 
 ```
 {
     "Version": "2012-10-17",
@@ -96,7 +96,7 @@ Please note that the original MAST setup is now significantly outdated.
 #### Deployment steps
 
 To use this repo for reprohub deployment (make sure the z2jh-aws-ansible is populated, otherwise 
-do `git submodule update --init z2jh-aws-ansible` in the main repo before the `cd` step below:
+do `git submodule update --init z2jh-aws-ansible` in the main repo before the `cd` step below):
 
 ```bash
 cd z2jh-aws-ansible
@@ -107,12 +107,12 @@ ansible-playbook -i hosts z2jh.yml -v --vault-password-file ../ansible_password
 To teardown
 
 ```bash
-ansible-playbook -i hosts teardown.yml -v --vault-password-file ansible_password -t all-fixtures
+ansible-playbook -i hosts teardown.yml -v --vault-password-file ../ansible_password -t all-fixtures
 ```
 
 To remove kubernetes without removing shared EFS:
 ```bash
-ansible-playbook -i hosts teardown.yml -v --vault-password-file ansible_password -t kubernetes
+ansible-playbook -i hosts teardown.yml -v --vault-password-file ../ansible_password -t kubernetes
 ```
 
 #### Quirks before pushing changes to github.
