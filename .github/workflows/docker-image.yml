@@ -27,7 +27,7 @@ jobs:
         with:
           context: ./docker
           push: true
-          tags: repronim/abcd-repronim:latest
+          tags: repronim/reprohub:latest
       -
         name: Build and push
         uses: docker/build-push-action@v2
@@ -35,4 +35,4 @@ jobs:
           context: ./docker
           push: true
           file: ./docker/Dockerfile.gpu
-          tags: repronim/abcd-repronim:latest-gpu
+          tags: repronim/reprohub:latest-gpu
