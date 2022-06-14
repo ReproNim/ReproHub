@@ -95,3 +95,5 @@ RUN cd /opt/extras && \
     cd /opt && rm -rf /opt/extras/* && \
     conda clean --all -f -y && rm -rf /tmp/*
 
+RUN pip install --no-cache-dir https://github.com/ReproNim/fsl_seg_to_nidm/archive/refs/heads/master.zip \
+    'rdflib>=6.1.0'
